@@ -36,7 +36,7 @@
 
   <body>
 
-    <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Lolo la Bricole</div>
+    <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block"><a href="index.html">Lolo la Bricole</a></div>
     <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">3 Allée Pierre Ronsard | 11110 Coursan | 06.61.88.30.88 | 06.87.00.68.86</div>
 
     <!-- Navigation -->
@@ -80,24 +80,19 @@
             <div class="embed-responsive embed-responsive-16by9 map-container mb-4 mb-lg-0" id="macarte">
 
 
-            <!-- <div id="macarte" style="width:385px; height:260px"></div> -->
-             <script type="text/javascript">
+             <!-- <script type="text/javascript">
              var carte = L.map('macarte').setView([43.2273108, 3.0512948000000506], 10);
 
              L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
              }).addTo(carte);
 
-
                 // Je mets une image pour l'icône de Coursan
                 var greenIcon = L.icon({
                  iconUrl: 'img/clou-mini.png',
 
-
                  iconSize:     [28, 55], // size of the icon
-
                  iconAnchor:   [20, 45], // point of the icon which will correspond to marker's location
-
                  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
              });
                 var coursan = L.marker([43.2273108, 3.0512948000000506], {icon: greenIcon}).addTo(carte);
@@ -110,17 +105,10 @@
                      var mapopup = coursan.getPopup();
                      mapopup.setContent('Zone de déplacement');
                      coursan.openPopup();
+             </script> -->
 
-             </script>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.150183388178!2d3.0491061150336987!3d43.22731077913815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1a973bff44399%3A0x514a078258e85570!2s3+All%C3%A9e+Pierre+Ronsard%2C+11110+Coursan!5e0!3m2!1sfr!2sfr!4v1507029002605" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-
-
-<!--
-              <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe> -->
-
-
-              <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAyLbgvPx3Lq5pP0ppZKMdGKzMQI70cZUQ&q=Space+Needle,Seattle+WA" allowfullscreen>
-              </iframe> -->
             </div>
           </div>
           <div class="col-lg-4">
@@ -146,24 +134,24 @@
           <strong>Contact</strong>
         </h2>
         <hr class="divider">
-        <form action="php/send_email.php" method="post" enctype="multipart/form-data">
+        <form action="php/copy_send_email.php" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="form-group col-lg-4">
               <label class="text-heading">Nom</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" name="nom">
             </div>
             <div class="form-group col-lg-4">
               <label class="text-heading">Email</label>
-              <input type="email" class="form-control">
+              <input type="email" class="form-control" name="email">
             </div>
             <div class="form-group col-lg-4">
               <label class="text-heading">Téléphone</label>
-              <input type="tel" class="form-control">
+              <input type="tel" class="form-control" name="telephone">
             </div>
             <div class="clearfix"></div>
             <div class="form-group col-lg-12">
               <label class="text-heading">Message</label>
-              <textarea class="form-control" rows="6"></textarea>
+              <textarea class="form-control" rows="6" name="message"></textarea>
             </div>
             <div class="form-group col-lg-12">
               <button type="submit" class="btn btn-secondary">Envoyer</button>

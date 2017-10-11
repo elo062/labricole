@@ -86,3 +86,15 @@ hr.divider {
 .map-container iframe.clicked {
   pointer-events: auto;
 }
+
+img {
+  vertical-align: middle;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}.container .bg-faded.p-4.my-4 .row .col-lg-8 .img-responsive {
+	padding-bottom: 40px;
+}

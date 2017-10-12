@@ -46,6 +46,10 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+p{
+  color: black;
+}
+
 
 .carousel-caption h3, .carousel-caption p {
   background-color: rgba(255, 255, 255, 0.5);
@@ -97,4 +101,21 @@ img {
   height: auto;
 }.container .bg-faded.p-4.my-4 .row .col-lg-8 .img-responsive {
 	padding-bottom: 40px;
+}
+
+/*Bouton haut*/
+
+.scrollToTop{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  height: 40px;
+  width: auto;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
 }

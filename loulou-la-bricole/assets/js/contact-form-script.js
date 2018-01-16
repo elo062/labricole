@@ -18,7 +18,7 @@ function submitForm(){
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
 
-
+// On envoie le code en ajax vers le fichier de traitement php
     $.ajax({
         type: "POST",
         url: "assets/php/form-process.php",

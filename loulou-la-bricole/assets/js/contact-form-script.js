@@ -2,7 +2,7 @@ $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
-        submitMSG(false, "Did you fill in the form properly?");
+        submitMSG(false, "Avez-vous rempli le formulaire correctement ?");
     } else {
         // everything looks good!
         event.preventDefault();
@@ -34,17 +34,21 @@ function submitForm(){
     });
 }
 
+
+// Après l'envoi du formulaire on le réinitialise
 function formSuccess(){
     $("#contactForm")[0].reset();
     submitMSG(true, "Votre message a bien été envoyé !")
 }
 
+// Si une erreur est détectée on ajoute la classe faisant vibrer les champs
 function formError(){
     $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
 
+// On fait apparaître un message différent en fonction du succès ou de l'échec de l'envoi
 function submitMSG(valid, msg){
     if(valid){
         var msgClasses = "h3 text-center tada animated text-success";
